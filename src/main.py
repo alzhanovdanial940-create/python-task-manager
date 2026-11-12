@@ -40,7 +40,7 @@ def search_tasks(tasks, keyword):
         print(f"{i}. {task}")
 def print_menu():
     print("\n" + "=" * 30)
-    print("📋 МЕНЕДЖЕР ЗАДАЧ (CLI)")
+    print("📋 МЕНЕДЖЕР ЗАДАЧ (CLI)( Версия 2.0 )")
     print("=" * 30)
     print("1. Показать все задачи")
     print("2. Добавить задачу")
