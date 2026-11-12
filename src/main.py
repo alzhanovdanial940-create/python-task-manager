@@ -68,5 +68,15 @@ if __name__ == "__main__":
             print("Выход из программы...")
             break
         else:
-            print("❌ Неверный ввод!! , попробуйте снова.")
-        
+            print("❌ Неверный ввод! , попробуйте снова.")
+
+def export_tasks_to_file(tasks, filename="exported_tasks.txt"):
+    """Экспортирует текущий список задач в текстовый файл."""
+    try:
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write("=== СПИСОК ЗАДАЧ (ЭКСПОРТ) ===\n")
+            for i, task in enumerate(tasks, 1):
+                file.write(f"{i}. {task}\n")
+        print(f"✅ Задачи успешно экспортированы в файл '{filename}'!")
+    except Exception as e:
+        print(f"❌ Ошибка при экспорте задач: {e}")
